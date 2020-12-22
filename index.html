@@ -193,7 +193,14 @@
 <button class='button' onclick="document.body.style='background-color:blue;' ">Button 11 </button>
 <button class='button' onclick="document.getElementById('mine').style.display='inline' ">Button 12 </button>
   
-  
+<button id="sizeBig" onclick="getBig()">Click me!</button>
+<button id="clearAll" onclick="clearAll()">Clickj em@</button>
+<button id="flip" onclick="flipMe()">Clicker</button>
+<button id="mover" onclick="moveMe()">Click!</button>
+<button id="spin" onclick="spinner()">Spin me!</button>
+<button id="3D" onclick="D3Spin()">Clcik mee!</button>
+<button id="alert" onclick="alert('HELLO IM GERALD AND IM A GARDENER FOR THE NYTIMES')">Lick me!</button>
+<button id="openWindow" onclick = "openWindow()">DON'T CLICK ME!</button>
 
   <img src="stick bug.jpg" alt=" get stick bugged lol" id='bug'>
   
@@ -429,7 +436,35 @@
         document.getElementById("broom").src = pic.replace("90x90", "225x225");
         document.getElementById("broom").style.display = "block";
       }
+	function getBig(){
+	  document.getElementById("sizeBig").style.width = "200px";
+	  document.getElementById("sizeBig").style.height = "200px";
+	}
+	function clearAll(){
 
+	  document.body.innerHTML = "You Won!";
+	  //document.clear();
+	  //var p = document.createElement("p");
+	  //p.innerHTML = "You Won!";
+	}
+	function flipMe(){
+	  document.getElementById("flip").style.transform = "scaleX(-1)";
+	}
+	function moveMe(){
+	  document.getElementById("mover").style.position = "absolute";
+	}
+	function spinner(){
+	  document.getElementById("spin").style.transform = "rotate(180deg)";
+	}
+	function D3Spin(){
+	  document.getElementById("3D").style.transform = "rotateZ(90deg)";
+	  document.getElementById("3D").style.transform = "rotateY(60deg)";
+	}
+	function openWindow(){
+	  var myWindow;
+	  myWindow = window.open("", "myWindow", "width=1000,height=1000");
+	  myWindow.document.write("<p>I TOLD YOU NOT TO CLICK IT'</p>");
+	}
     </script>
 	<script src="script.js"></script>
     	<h1 id ="header">Find the button that turns the background red<h1>
